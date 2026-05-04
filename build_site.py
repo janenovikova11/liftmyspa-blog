@@ -48,6 +48,18 @@ MAIN_DOMAIN = "https://liftmyspa.com"
 BRAND_NAME = "Lift My Spa"
 BRAND_TAGLINE = "AI plus Marketing Automation Built for Med Spas"
 DEMO_URL = "https://liftmyspa.com/demo-call-page"
+
+
+def cta_url(placement, slug=None):
+    """Build a CTA URL with UTM tracking parameters."""
+    from urllib.parse import urlencode
+    params = {
+        "utm_source": "blog",
+        "utm_medium": "referral",
+        "utm_campaign": slug or "blog_general",
+        "utm_content": placement,
+    }
+    return f"{DEMO_URL}?{urlencode(params)}"
 PHONE = "+19188514816"
 PHONE_DISPLAY = "+1 (918) 851-4816"
 PUBLISH_DATE = "2026-05-04"
@@ -359,7 +371,7 @@ def compute_related(articles_by_slug):
 # ============================================================
 # Templates
 # ============================================================
-def header_html(active_blog=True):
+def header_html(active_blog=True, slug=None):
     return f"""<header class="site-header">
   <div class="container site-header-inner">
     <a href="{MAIN_DOMAIN}" class="logo">
@@ -373,7 +385,7 @@ def header_html(active_blog=True):
     </nav>
     <div class="header-cta">
       <span class="header-region">AZ &middot; TX &middot; FL &middot; OK</span>
-      <a href="{DEMO_URL}" class="btn btn-primary btn-sm">Contact Us</a>
+      <a href="{cta_url('header', slug)}" class="btn btn-primary btn-sm">Contact Us</a>
     </div>
   </div>
 </header>
@@ -641,7 +653,7 @@ def render_article(article, related_articles):
 </head>
 <body>
 
-{header_html(active_blog=True)}
+{header_html(active_blog=True, slug=article['slug'])}
 
 <section class="article-hero">
   <div class="container">
@@ -670,7 +682,7 @@ def render_article(article, related_articles):
         <div class="inline-cta">
           <h3>Ready to see Lift My Spa for your med spa?</h3>
           <p>Book a free 30-minute consultation. We will walk through your funnel, show you the leaks, and demo the AI front desk live.</p>
-          <a href="{DEMO_URL}" class="btn btn-light">Schedule Free Consultation</a>
+          <a href="{cta_url('inline', article['slug'])}" class="btn btn-light">Schedule Free Consultation</a>
         </div>
       </article>
 
@@ -680,7 +692,7 @@ def render_article(article, related_articles):
           <h4>Free Consultation</h4>
           <h3>See how much revenue you are missing</h3>
           <p>30-minute call. We will analyze your current funnel and show you the leak.</p>
-          <a href="{DEMO_URL}" class="btn">Schedule Free Consultation</a>
+          <a href="{cta_url('sidebar', article['slug'])}" class="btn">Schedule Free Consultation</a>
         </div>
         <div class="sidebar-card">
           <h4>Share this article</h4>
@@ -717,7 +729,7 @@ def render_article(article, related_articles):
   <div class="container-narrow">
     <h2>Ready to capture every med spa lead?</h2>
     <p>Book a free consultation and we will show you the exact revenue leak in your funnel and the system that plugs it.</p>
-    <a href="{DEMO_URL}" class="btn btn-primary" style="font-size: 1.05rem; padding: 16px 32px;">Schedule Free Consultation</a>
+    <a href="{cta_url('final', article['slug'])}" class="btn btn-primary" style="font-size: 1.05rem; padding: 16px 32px;">Schedule Free Consultation</a>
   </div>
 </section>
 
@@ -864,7 +876,7 @@ def render_index(articles):
 </head>
 <body>
 
-{header_html(active_blog=True)}
+{header_html(active_blog=True, slug='blog_index')}
 
 <section class="blog-hero">
   <div class="container-narrow">
@@ -901,7 +913,7 @@ def render_index(articles):
   <div class="container-narrow">
     <h2>Med spa marketing insights you can actually use.</h2>
     <p>Want a personal walkthrough of how Lift My Spa would work for your clinic? Book a free 30-minute consultation. No pressure.</p>
-    <a href="{DEMO_URL}" class="btn btn-light" style="font-size:1rem; padding:16px 32px;">Schedule Free Consultation</a>
+    <a href="{cta_url('index_strip', 'blog_index')}" class="btn btn-light" style="font-size:1rem; padding:16px 32px;">Schedule Free Consultation</a>
   </div>
 </section>
 
@@ -1021,7 +1033,7 @@ def generate_404():
 {head}
 </head>
 <body>
-{header_html(active_blog=True)}
+{header_html(active_blog=True, slug='blog_index')}
 <section style="padding: 120px 0; text-align: center;">
   <div class="container-narrow">
     <h1 style="font-size: clamp(3rem, 8vw, 6rem); color: var(--brand-red); margin-bottom: 16px;">404</h1>
