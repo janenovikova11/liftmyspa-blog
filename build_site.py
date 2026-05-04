@@ -790,10 +790,11 @@ def render_index(articles):
         cat_items.append(f'<li><a href="?cat={slug_c}"{active}>{html.escape(c)}</a></li>')
     cat_html = "\n".join(cat_items)
 
-    # Featured = first National Pillar
+    # Featured = first National Pillar; override hero image with a strong med-spa shot
     featured = next((a for a in articles if a["cluster"] == "National Pillar"), articles[0])
+    featured_hero = "https://images.unsplash.com/photo-1746708810803-722593e53772?w=1600&q=80&auto=format&fit=crop"
     feat_html = f"""<div class="featured-post">
-  <div class="featured-image" style="background-image: linear-gradient(180deg, rgba(149,8,25,0.25) 0%, rgba(149,8,25,0.85) 100%), url('{featured['image']}');">
+  <div class="featured-image" style="background-image: linear-gradient(180deg, rgba(149,8,25,0.30) 0%, rgba(149,8,25,0.88) 100%), url('{featured_hero}');">
     <span class="badge">Featured</span>
   </div>
   <div class="featured-content">
@@ -810,15 +811,15 @@ def render_index(articles):
             continue
         loc = location_from(a) or a["category"]
         cards_html += f"""<article class="article-card" data-cluster="{a['cluster']}" data-category="{a['category']}">
-  <div class="article-card-image">
-    <img src="{a['image']}" alt="{html.escape(a['image_alt'])}" loading="lazy">
-  </div>
-  <div class="article-card-body">
+  <a class="card-link" href="/{a['slug']}">
     <span class="article-card-tag">{html.escape(a['category'])}</span>
-    <h3><a href="/{a['slug']}">{html.escape(a['title'])}</a></h3>
+    <h3>{html.escape(a['title'])}</h3>
     <p class="excerpt">{html.escape(a['meta_description'])}</p>
-    <div class="meta">{html.escape(loc)}</div>
-  </div>
+    <div class="card-footer">
+      <span class="meta">{html.escape(loc)}</span>
+      <span class="arrow" aria-hidden="true">&rarr;</span>
+    </div>
+  </a>
 </article>"""
 
     return f"""<!DOCTYPE html>
@@ -848,18 +849,20 @@ def render_index(articles):
   @media (max-width: 880px) {{ .featured-post {{ grid-template-columns: 1fr; }} .featured-content {{ padding: 32px 24px; }} }}
   .articles-section {{ padding: 80px 0 0; }}
   .articles-section h2 {{ margin-bottom: 32px; font-weight: 800; }}
-  .articles-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }}
-  .article-card {{ background: var(--neutral-100); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--neutral-300); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; display: flex; flex-direction: column; }}
-  .article-card:hover {{ transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--brand-red); }}
-  .article-card-image {{ aspect-ratio: 16/10; background: var(--brand-cream); position: relative; overflow: hidden; }}
-  .article-card-image img {{ width: 100%; height: 100%; object-fit: cover; display: block; }}
-  .article-card-body {{ padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }}
-  .article-card-tag {{ display: inline-block; background: var(--brand-red-soft); color: var(--brand-red); padding: 4px 10px; border-radius: 999px; font-family: var(--headline-font); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; align-self: flex-start; }}
-  .article-card h3 {{ font-size: 1.12rem; margin-bottom: 12px; line-height: 1.35; font-weight: 700; }}
-  .article-card h3 a {{ color: var(--text-primary); }}
-  .article-card h3 a:hover {{ color: var(--brand-red); }}
-  .article-card .excerpt {{ color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 18px; flex-grow: 1; }}
-  .article-card .meta {{ color: var(--text-muted); font-size: 0.8rem; font-family: var(--headline-font); font-weight: 600; }}
+  .articles-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }}
+  .article-card {{ background: var(--neutral-100); border-radius: var(--radius-md); border: 1px solid var(--neutral-300); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; position: relative; overflow: hidden; }}
+  .article-card::before {{ content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--brand-red); transform: scaleY(0); transform-origin: top; transition: transform 0.25s ease; }}
+  .article-card:hover {{ transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--brand-red); }}
+  .article-card:hover::before {{ transform: scaleY(1); }}
+  .article-card .card-link {{ display: flex; flex-direction: column; padding: 28px 24px 22px; height: 100%; min-height: 240px; text-decoration: none; color: inherit; }}
+  .article-card-tag {{ display: inline-block; background: var(--brand-red-soft); color: var(--brand-red); padding: 4px 12px; border-radius: 999px; font-family: var(--headline-font); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; align-self: flex-start; }}
+  .article-card h3 {{ font-size: 1.18rem; margin: 0 0 14px; line-height: 1.3; font-weight: 800; color: var(--text-primary); letter-spacing: -0.01em; }}
+  .article-card:hover h3 {{ color: var(--brand-red); }}
+  .article-card .excerpt {{ color: var(--text-secondary); font-size: 0.93rem; line-height: 1.55; margin: 0 0 22px; flex-grow: 1; }}
+  .article-card .card-footer {{ display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--neutral-300); }}
+  .article-card .meta {{ color: var(--text-muted); font-size: 0.78rem; font-family: var(--headline-font); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }}
+  .article-card .arrow {{ color: var(--brand-red); font-family: var(--headline-font); font-weight: 800; font-size: 1.1rem; transition: transform 0.2s ease; }}
+  .article-card:hover .arrow {{ transform: translateX(4px); }}
   @media (max-width: 880px) {{ .articles-grid {{ grid-template-columns: repeat(2, 1fr); }} }}
   @media (max-width: 540px) {{ .articles-grid {{ grid-template-columns: 1fr; }} }}
   .cta-strip {{ background: var(--brand-red); color: var(--text-on-red); padding: 64px 0; margin-top: 80px; text-align: center; }}
