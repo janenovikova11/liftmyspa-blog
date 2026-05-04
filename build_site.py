@@ -587,10 +587,7 @@ def render_article(article, related_articles):
   .article-title {{ font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.15; margin-bottom: 24px; max-width: 880px; font-weight: 900; }}
   .article-meta {{ display: flex; gap: 24px; flex-wrap: wrap; color: var(--text-secondary); font-size: 0.9rem; font-family: var(--headline-font); font-weight: 600; padding-top: 20px; border-top: 1px solid var(--neutral-300); margin-top: 32px; }}
   .article-meta strong {{ color: var(--text-primary); font-weight: 700; }}
-  .article-hero-image {{ background: var(--brand-cream); }}
-  .article-hero-image img {{ width: 100%; max-height: 480px; object-fit: cover; border-radius: var(--radius-lg); margin-top: -20px; box-shadow: var(--shadow-md); }}
-  .article-hero-image .container {{ padding-bottom: 24px; background: linear-gradient(180deg, var(--brand-cream) 50%, var(--neutral-100) 50%); }}
-  .article-body {{ padding: 32px 0 72px; }}
+  .article-body {{ padding: 56px 0 72px; }}
   .article-body-grid {{ display: grid; grid-template-columns: 1fr 280px; gap: 64px; }}
   .article-content {{ font-size: 1.08rem; line-height: 1.78; color: var(--text-primary); }}
   .article-content > p:first-of-type {{ font-size: 1.25rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 36px; font-weight: 500; }}
@@ -661,12 +658,6 @@ def render_article(article, related_articles):
       <span><strong>Published</strong> {datetime.strptime(PUBLISH_DATE, '%Y-%m-%d').strftime('%B %-d, %Y')}</span>
       <span><strong>Region</strong> {html.escape(location or 'United States')}</span>
     </div>
-  </div>
-</section>
-
-<section class="article-hero-image">
-  <div class="container">
-    <img src="{article['image']}" alt="{html.escape(article['image_alt'])}">
   </div>
 </section>
 
