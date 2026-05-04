@@ -1,0 +1,2 @@
+# Strip .html extension if accessed
+/*.html /:splat 301

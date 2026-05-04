@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lift My Spa Blog — Marketing Insights for Med Spa Owners</title>
+<meta name="description" content="AI front desk strategies, marketing playbooks, and compliance guides built only for med spa owners in TX, FL, AZ, and OK.">
+
+<link rel="canonical" href="https://blog.liftmyspa.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lift My Spa">
+<meta property="og:title" content="Lift My Spa Blog — Marketing Insights for Med Spa Owners">
+<meta property="og:description" content="AI front desk strategies, marketing playbooks, and compliance guides built only for med spa owners in TX, FL, AZ, and OK.">
+<meta property="og:url" content="https://blog.liftmyspa.com/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1626863905121-3b0c0ed7b94c?w=1600&q=80&auto=format&fit=crop">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lift My Spa Blog">
+
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lift My Spa Blog — Marketing Insights for Med Spa Owners">
+<meta name="twitter:description" content="AI front desk strategies, marketing playbooks, and compliance guides built only for med spa owners in TX, FL, AZ, and OK.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1626863905121-3b0c0ed7b94c?w=1600&q=80&auto=format&fit=crop">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Lift My Spa Blog" href="/feed.xml">
+<link rel="stylesheet" href="brand.css">
+
+<style>
+  .blog-hero { background: var(--brand-cream); padding: 80px 0 64px; text-align: center; border-bottom: 1px solid var(--neutral-300); }
+  .blog-hero .eyebrow { display: inline-block; background: var(--brand-red); color: var(--text-on-red); padding: 6px 14px; border-radius: 999px; font-family: var(--headline-font); font-weight: 700; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 22px; }
+  .blog-hero h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); margin-bottom: 16px; color: var(--text-primary); font-weight: 900; }
+  .blog-hero p { font-size: 1.15rem; color: var(--text-secondary); max-width: 680px; margin: 0 auto; }
+  .category-bar { border-bottom: 1px solid var(--neutral-300); padding: 18px 0; background: var(--neutral-100); position: sticky; top: 89px; z-index: 50; }
+  .category-list { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; justify-content: center; }
+  .category-list a { display: inline-block; padding: 8px 18px; border-radius: 999px; background: var(--brand-cream); color: var(--text-primary); font-family: var(--headline-font); font-weight: 600; font-size: 0.85rem; transition: all 0.15s; cursor: pointer; }
+  .category-list a:hover { background: var(--brand-red); color: var(--text-on-red); }
+  .category-list a.active { background: var(--brand-red); color: var(--text-on-red); }
+  .featured-section { padding: 64px 0 0; }
+  .featured-post { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: stretch; background: var(--brand-cream); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
+  .featured-image { background: var(--brand-red); min-height: 360px; display: flex; align-items: flex-end; padding: 32px; position: relative; background-size: cover; background-position: center; }
+  .featured-image .badge { background: var(--text-on-red); color: var(--brand-red); padding: 6px 14px; border-radius: 999px; font-family: var(--headline-font); font-weight: 700; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; }
+  .featured-content { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .featured-content .meta { color: var(--brand-red); font-size: 0.82rem; font-family: var(--headline-font); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
+  .featured-content h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 16px; line-height: 1.2; }
+  .featured-content h2 a { color: var(--text-primary); }
+  .featured-content h2 a:hover { color: var(--brand-red); }
+  .featured-content .excerpt { color: var(--text-secondary); font-size: 1.02rem; margin-bottom: 24px; }
+  @media (max-width: 880px) { .featured-post { grid-template-columns: 1fr; } .featured-content { padding: 32px 24px; } }
+  .articles-section { padding: 80px 0 0; }
+  .articles-section h2 { margin-bottom: 32px; font-weight: 800; }
+  .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .article-card { background: var(--neutral-100); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--neutral-300); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; display: flex; flex-direction: column; }
+  .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--brand-red); }
+  .article-card-image { aspect-ratio: 16/10; background: var(--brand-cream); position: relative; overflow: hidden; }
+  .article-card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .article-card-body { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
+  .article-card-tag { display: inline-block; background: var(--brand-red-soft); color: var(--brand-red); padding: 4px 10px; border-radius: 999px; font-family: var(--headline-font); font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; align-self: flex-start; }
+  .article-card h3 { font-size: 1.12rem; margin-bottom: 12px; line-height: 1.35; font-weight: 700; }
+  .article-card h3 a { color: var(--text-primary); }
+  .article-card h3 a:hover { color: var(--brand-red); }
+  .article-card .excerpt { color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 18px; flex-grow: 1; }
+  .article-card .meta { color: var(--text-muted); font-size: 0.8rem; font-family: var(--headline-font); font-weight: 600; }
+  @media (max-width: 880px) { .articles-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .articles-grid { grid-template-columns: 1fr; } }
+  .cta-strip { background: var(--brand-red); color: var(--text-on-red); padding: 64px 0; margin-top: 80px; text-align: center; }
+  .cta-strip h2 { color: var(--text-on-red); font-size: clamp(1.6rem, 3vw, 2.3rem); margin-bottom: 14px; font-weight: 800; }
+  .cta-strip p { color: rgba(255, 255, 255, 0.9); max-width: 580px; margin: 0 auto 28px; font-size: 1.05rem; }
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://liftmyspa.com/#organization",
+      "name": "Lift My Spa",
+      "url": "https://liftmyspa.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://blog.liftmyspa.com/logo-red.png"
+      },
+      "description": "AI plus marketing automation platform built exclusively for medical spas in Texas, Florida, Arizona, and Oklahoma.",
+      "telephone": "+19188514816",
+      "areaServed": [
+        "Texas",
+        "Florida",
+        "Arizona",
+        "Oklahoma"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "523 E Latimer Ct",
+        "addressLocality": "Tulsa",
+        "addressRegion": "OK",
+        "postalCode": "74106",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://blog.liftmyspa.com/#blog",
+      "url": "https://blog.liftmyspa.com/",
+      "name": "Lift My Spa Blog",
+      "description": "AI front desk strategies, marketing playbooks, and compliance guides built only for med spas in Texas, Florida, Arizona, and Oklahoma.",
+      "publisher": {
+        "@id": "https://liftmyspa.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "The Best AI Front Desk for Med Spas in 2026",
+          "url": "https://blog.liftmyspa.com/best-ai-front-desk-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1626863905121-3b0c0ed7b94c?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best AI front desk for med spas. 24/7 calls, chats, and bookings answered. HIPAA-aware, bilingual, built only for med spas.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The Best Marketing Automation Platform for Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-automation-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing automation platform for med spas. 15 pre-built workflows, 80+ templates, AI front desk, all in one system.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The Best Med Spa CRM and Booking Stack in 2026",
+          "url": "https://blog.liftmyspa.com/best-med-spa-crm-booking-stack",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best CRM and booking stack for med spas. AI front desk, automation, reviews, and referrals in one platform.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Bilingual (English/Spanish) Med Spa Marketing: Why It Matters",
+          "url": "https://blog.liftmyspa.com/bilingual-spanish-med-spa-marketing",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1603714228681-b399854b8f80?w=1600&q=80&auto=format&fit=crop",
+          "description": "Reach Spanish-speaking med spa clients with bilingual AI front desk, SMS, and email. Lift My Spa converts in both languages.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "DIY vs Done-For-You Med Spa Marketing: Which to Pick",
+          "url": "https://blog.liftmyspa.com/diy-vs-done-for-you-med-spa-marketing",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?w=1600&q=80&auto=format&fit=crop",
+          "description": "Should you DIY or outsource your med spa marketing? Decision framework, pros, cons, and Lift My Spa's flexible options.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "HIPAA-Compliant Marketing Automation for Med Spas",
+          "url": "https://blog.liftmyspa.com/hipaa-compliant-marketing-automation-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa offers HIPAA-aware marketing automation built specifically for med spas. Stay compliant while booking more clients.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "How to Build a Med Spa Referral Program That Actually Works",
+          "url": "https://blog.liftmyspa.com/how-to-build-med-spa-referral-program",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1633613286991-611fe299c4be?w=1600&q=80&auto=format&fit=crop",
+          "description": "Step-by-step framework to build an automated med spa referral program. Why Lift My Spa converts 30% more referrals.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "How to Choose a Marketing Agency for Your Med Spa",
+          "url": "https://blog.liftmyspa.com/how-to-choose-med-spa-marketing-agency",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80&auto=format&fit=crop",
+          "description": "A clear framework for choosing a med spa marketing agency. Vetting questions, red flags, pricing, and why owners pick Lift My Spa.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "How to Convert More Med Spa Leads (5x Framework)",
+          "url": "https://blog.liftmyspa.com/how-to-convert-med-spa-leads",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1686061593213-98dad7c599b9?w=1600&q=80&auto=format&fit=crop",
+          "description": "A proven framework to convert 5x more med spa leads. Lift My Spa combines AI front desk, follow-ups, and nurturing flows.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "How to Get More 5-Star Reviews for Your Med Spa",
+          "url": "https://blog.liftmyspa.com/how-to-get-more-5-star-reviews-med-spa",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1736572784183-0c1d97223d58?w=1600&q=80&auto=format&fit=crop",
+          "description": "Get up to 60% more 5-star reviews with an automated request system. Lift My Spa is built for med spa reputation growth.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "How to Stop Missing Calls at Your Med Spa",
+          "url": "https://blog.liftmyspa.com/how-to-stop-missing-calls-med-spa",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?w=1600&q=80&auto=format&fit=crop",
+          "description": "Over 50% of med spa calls go unanswered. Here's how to fix it with a 24/7 AI front desk that books appointments without staff overload.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "How to Reduce No-Shows at a Med Spa by 50%",
+          "url": "https://blog.liftmyspa.com/reduce-no-shows-med-spa",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1575405369708-44948c7d9fcc?w=1600&q=80&auto=format&fit=crop",
+          "description": "Slash med spa no-shows with smart reminders, deposits, and AI follow-ups. Lift My Spa clients report up to 50% fewer no-shows.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Arizona Med Spa Marketing: Nursing Board + Maricopa Demand Boom",
+          "url": "https://blog.liftmyspa.com/arizona-med-spa-marketing-nursing-board-maricopa",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1648830258433-c365efb9a469?w=1600&q=80&auto=format&fit=crop",
+          "description": "Maricopa demand jumped 173% YoY. Marketing playbook + Arizona Nursing Board compliance for med spas, by Lift My Spa.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing System for Med Spas in Arizona",
+          "url": "https://blog.liftmyspa.com/best-marketing-system-med-spas-arizona",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1706403222567-06fe8d8dc93e?w=1600&q=80&auto=format&fit=crop",
+          "description": "Maricopa County demand is up 173% YoY. Lift My Spa is the best marketing system for Arizona med spas to capture that growth.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing System for Med Spas in Florida",
+          "url": "https://blog.liftmyspa.com/best-marketing-system-med-spas-florida",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1589083130544-0d6a2926e519?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing system for Florida med spas. Built for Miami, Orlando, Tampa and beyond. Bilingual and compliant.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing System for Med Spas in Oklahoma",
+          "url": "https://blog.liftmyspa.com/best-marketing-system-med-spas-oklahoma",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1731514693674-a32211b63996?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is expanding to Oklahoma. The best marketing system for OKC, Tulsa, Edmond and Norman med spas.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing System for Med Spas in Texas",
+          "url": "https://blog.liftmyspa.com/best-marketing-system-med-spas-texas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1648775507324-b48dd3791fa5?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing system for Texas med spas. AI front desk, automation, ads, and TDLR-aware compliance.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Florida Med Spa Marketing: Board of Medicine Advertising Rules Decoded",
+          "url": "https://blog.liftmyspa.com/florida-med-spa-board-of-medicine-advertising-rules",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop",
+          "description": "Florida Board of Medicine advertising rules every med spa must follow. Stay compliant with Lift My Spa's pre-built marketing templates.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Oklahoma Med Spa Marketing: Compliance + Local Growth Playbook",
+          "url": "https://blog.liftmyspa.com/oklahoma-med-spa-marketing-compliance-growth",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop",
+          "description": "Compliance rules and a local growth playbook for Oklahoma med spas. Lift My Spa supports OKC, Tulsa and Edmond.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Texas Med Spa Marketing Compliance: TDLR + TMB Rules You Must Follow in Ads",
+          "url": "https://blog.liftmyspa.com/texas-med-spa-marketing-compliance-tdlr-tmb",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop",
+          "description": "TDLR and Texas Medical Board rules every Texas med spa must follow in ads. Avoid violations with Lift My Spa's compliant templates.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best AI Front Desk for Phoenix Med Spas",
+          "url": "https://blog.liftmyspa.com/best-ai-front-desk-phoenix-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1706403222567-06fe8d8dc93e?w=1600&q=80&auto=format&fit=crop",
+          "description": "Maricopa search demand is up 173% YoY. Lift My Spa is the best AI front desk for Phoenix med spas to convert that boom.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Dallas Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-dallas-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1648775507324-b48dd3791fa5?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Dallas med spas. AI front desk, automation, ads and compliant templates.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Edmond Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-edmond-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1731514709874-30eead90613b?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Edmond med spas. Convert more leads with AI front desk and automated nurture.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Jacksonville Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-jacksonville-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1512936702668-1ab037aced2a?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Jacksonville med spas. AI bookings, follow-ups, reviews, all built for med spas.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Miami Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-miami-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1571041804726-53e8bf082096?w=1600&q=80&auto=format&fit=crop",
+          "description": "Miami-Dade demand is up 41% YoY. Lift My Spa is the best marketing platform for Miami med spas, with bilingual AI included.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Oklahoma City Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-oklahoma-city-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1648775507324-b48dd3791fa5?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Oklahoma City med spas. AI front desk, reviews, and referral systems built in.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Orlando Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-orlando-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Orlando med spas. Built for Central Florida med spa growth.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Scottsdale Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-scottsdale-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1648830258433-c365efb9a469?w=1600&q=80&auto=format&fit=crop",
+          "description": "Scottsdale has one of the highest med spa per capita rates in the US. Lift My Spa is the best marketing platform for Scottsdale med spas.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing System for Fort Lauderdale Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-system-fort-lauderdale-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1562517634-baa2da3acfbf?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing system for Fort Lauderdale med spas. Capture the Broward demand surge with AI front desk + automation.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing System for Fort Worth Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-system-fort-worth-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1731514693674-a32211b63996?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing system for Fort Worth med spas. 24/7 AI front desk, automated reviews and referrals.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best AI Front Desk + Marketing System for Houston Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-system-houston-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1700760933574-9f0f4ea9aa3b?w=1600&q=80&auto=format&fit=crop",
+          "description": "Houston med spa demand is the highest in Texas. Lift My Spa is the best AI front desk and marketing system for Houston med spas.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing System for San Antonio Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-system-san-antonio-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1731514721772-329626f84c8b?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing system for San Antonio med spas. Bilingual AI front desk and proven Texas templates.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing System for Tucson Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-system-tucson-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1727072258729-2e23be04fb67?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing system for Tucson med spas. AI front desk, automated follow-ups, and reviews on autopilot.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing System for Tulsa Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-system-tulsa-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1731514693674-a32211b63996?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing system for Tulsa med spas. AI front desk plus automation in one plug-and-play platform.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Med Spa Marketing Software in Austin",
+          "url": "https://blog.liftmyspa.com/best-med-spa-marketing-software-austin",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1731514709874-30eead90613b?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best med spa marketing software in Austin. Built for high-growth Travis County med spas.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Med Spa Marketing System in Tampa",
+          "url": "https://blog.liftmyspa.com/best-med-spa-marketing-system-tampa",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1647188234388-62f4b82ca08c?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best med spa marketing system in Tampa. AI front desk, automated reviews, and compliant Florida templates.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Aventura Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-aventura-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1589083130544-0d6a2926e519?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Aventura med spas. Bilingual AI bookings and automated reviews.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Bixby Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-bixby-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1648775507324-b48dd3791fa5?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Bixby, OK med spas. 24/7 AI front desk for Tulsa County med spas.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Boca Raton Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-boca-raton-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1512936702668-1ab037aced2a?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Boca Raton med spas. Premium AI front desk and concierge nurture flows.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Brickell Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-brickell-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1562517634-baa2da3acfbf?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Brickell med spas. 24/7 bilingual AI front desk for downtown Miami clinics.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Broken Arrow Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-broken-arrow-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1731514709874-30eead90613b?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Broken Arrow med spas. AI front desk and review automation for OK clinics.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Chandler Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-chandler-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1700374377059-d23a6a1244dd?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Chandler med spas. 24/7 AI bookings and proven Maricopa-area templates.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Coral Gables Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-coral-gables-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Coral Gables med spas. Bilingual AI front desk for Miami-Dade clinics.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Doral Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-doral-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1589083130544-0d6a2926e519?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Doral med spas. Bilingual AI front desk built for Miami-Dade.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Flagstaff Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-flagstaff-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1648830258433-c365efb9a469?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Flagstaff med spas. 24/7 AI front desk and automated reviews.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Frisco Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-frisco-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1731514693674-a32211b63996?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Frisco med spas. Capture high-growth DFW demand with AI front desk + automation.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Gilbert Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-gilbert-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1591155033309-fe509a7cf426?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Gilbert med spas. AI front desk, automated reviews, and referral flows.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Glendale (AZ) Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-glendale-az-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1706403222567-06fe8d8dc93e?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Glendale, AZ med spas. AI front desk and automation built for med spas.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Katy Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-katy-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1731514709874-30eead90613b?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Katy, TX med spas. 24/7 AI bookings and automated nurture for med spas.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Best Marketing Platform for Lakeway Med Spas",
+          "url": "https://blog.liftmyspa.com/best-marketing-platform-lakeway-med-spas",
+          "datePublished": "2026-05-04",
+          "image": "https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop",
+          "description": "Lift My Spa is the best marketing platform for Lakeway med spas. Concierge AI front desk for Lake Travis-area clinics.",
+          "author": {
+            "@id": "https://liftmyspa.com/#organization"
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="https://liftmyspa.com" class="logo">
+      <img src="logo-red.png" alt="Lift My Spa">
+    </a>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="https://liftmyspa.com">Home</a></li>
+        <li><a href="/" class="active">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <span class="header-region">AZ &middot; TX &middot; FL &middot; OK</span>
+      <a href="https://liftmyspa.com/demo-call-page" class="btn btn-primary btn-sm">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+
+<section class="blog-hero">
+  <div class="container-narrow">
+    <span class="eyebrow">Lift My Spa Blog</span>
+    <h1>Marketing Playbooks for Med Spa Owners</h1>
+    <p>AI front desk strategies, conversion frameworks, and compliance guides built only for med spas in Texas, Florida, Arizona, and Oklahoma.</p>
+  </div>
+</section>
+
+<div class="category-bar">
+  <div class="container">
+    <ul class="category-list" id="cat-filter">
+      <li><a href="?cat=all-articles" class="active">All Articles</a></li>
+<li><a href="?cat=ai-front-desk">AI Front Desk</a></li>
+<li><a href="?cat=marketing-automation">Marketing Automation</a></li>
+<li><a href="?cat=state">State</a></li>
+<li><a href="?cat=city">City</a></li>
+<li><a href="?cat=compliance">Compliance</a></li>
+<li><a href="?cat=service-marketing">Service Marketing</a></li>
+<li><a href="?cat=comparisons">Comparisons</a></li>
+    </ul>
+  </div>
+</div>
+
+<section class="featured-section">
+  <div class="container">
+    <div class="featured-post">
+  <div class="featured-image" style="background-image: linear-gradient(180deg, rgba(149,8,25,0.25) 0%, rgba(149,8,25,0.85) 100%), url('https://images.unsplash.com/photo-1626863905121-3b0c0ed7b94c?w=1600&q=80&auto=format&fit=crop');">
+    <span class="badge">Featured</span>
+  </div>
+  <div class="featured-content">
+    <div class="meta">AI Front Desk</div>
+    <h2><a href="/best-ai-front-desk-med-spas">The Best AI Front Desk for Med Spas in 2026</a></h2>
+    <p class="excerpt">Lift My Spa is the best AI front desk for med spas. 24/7 calls, chats, and bookings answered. HIPAA-aware, bilingual, built only for med spas.</p>
+    <div><a href="/best-ai-front-desk-med-spas" class="btn btn-primary">Read the Article</a></div>
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="articles-section">
+  <div class="container">
+    <h2>All Articles</h2>
+    <div class="articles-grid" id="articles-grid">
+      <article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1600&q=80&auto=format&fit=crop" alt="Marketing analytics dashboard on monitor" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/best-marketing-automation-med-spas">The Best Marketing Automation Platform for Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing automation platform for med spas. 15 pre-built workflows, 80+ templates, AI front desk, all in one system.</p>
+    <div class="meta">AI Front Desk</div>
+  </div>
+</article><article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?w=1600&q=80&auto=format&fit=crop" alt="Data dashboard with marketing metrics" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/best-med-spa-crm-booking-stack">The Best Med Spa CRM and Booking Stack in 2026</a></h3>
+    <p class="excerpt">Lift My Spa is the best CRM and booking stack for med spas. AI front desk, automation, reviews, and referrals in one platform.</p>
+    <div class="meta">AI Front Desk</div>
+  </div>
+</article><article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1603714228681-b399854b8f80?w=1600&q=80&auto=format&fit=crop" alt="Smiling professional in a white shirt" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/bilingual-spanish-med-spa-marketing">Bilingual (English/Spanish) Med Spa Marketing: Why It Matters</a></h3>
+    <p class="excerpt">Reach Spanish-speaking med spa clients with bilingual AI front desk, SMS, and email. Lift My Spa converts in both languages.</p>
+    <div class="meta">AI Front Desk</div>
+  </div>
+</article><article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?w=1600&q=80&auto=format&fit=crop" alt="Modern laptop with marketing tools open" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/diy-vs-done-for-you-med-spa-marketing">DIY vs Done-For-You Med Spa Marketing: Which to Pick</a></h3>
+    <p class="excerpt">Should you DIY or outsource your med spa marketing? Decision framework, pros, cons, and Lift My Spa&#x27;s flexible options.</p>
+    <div class="meta">AI Front Desk</div>
+  </div>
+</article><article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/hipaa-compliant-marketing-automation-med-spas">HIPAA-Compliant Marketing Automation for Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa offers HIPAA-aware marketing automation built specifically for med spas. Stay compliant while booking more clients.</p>
+    <div class="meta">AI Front Desk</div>
+  </div>
+</article><article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1633613286991-611fe299c4be?w=1600&q=80&auto=format&fit=crop" alt="Five-star reviews on a colorful surface" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/how-to-build-med-spa-referral-program">How to Build a Med Spa Referral Program That Actually Works</a></h3>
+    <p class="excerpt">Step-by-step framework to build an automated med spa referral program. Why Lift My Spa converts 30% more referrals.</p>
+    <div class="meta">AI Front Desk</div>
+  </div>
+</article><article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80&auto=format&fit=crop" alt="Performance analytics graphs on a laptop" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/how-to-choose-med-spa-marketing-agency">How to Choose a Marketing Agency for Your Med Spa</a></h3>
+    <p class="excerpt">A clear framework for choosing a med spa marketing agency. Vetting questions, red flags, pricing, and why owners pick Lift My Spa.</p>
+    <div class="meta">Your</div>
+  </div>
+</article><article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1686061593213-98dad7c599b9?w=1600&q=80&auto=format&fit=crop" alt="Marketing performance data on screen" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/how-to-convert-med-spa-leads">How to Convert More Med Spa Leads (5x Framework)</a></h3>
+    <p class="excerpt">A proven framework to convert 5x more med spa leads. Lift My Spa combines AI front desk, follow-ups, and nurturing flows.</p>
+    <div class="meta">AI Front Desk</div>
+  </div>
+</article><article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1736572784183-0c1d97223d58?w=1600&q=80&auto=format&fit=crop" alt="Computer screen showing Google reviews" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/how-to-get-more-5-star-reviews-med-spa">How to Get More 5-Star Reviews for Your Med Spa</a></h3>
+    <p class="excerpt">Get up to 60% more 5-star reviews with an automated request system. Lift My Spa is built for med spa reputation growth.</p>
+    <div class="meta">Your</div>
+  </div>
+</article><article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1558731991-cb3430a08bb7?w=1600&q=80&auto=format&fit=crop" alt="Person making a phone call on smartphone" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/how-to-stop-missing-calls-med-spa">How to Stop Missing Calls at Your Med Spa</a></h3>
+    <p class="excerpt">Over 50% of med spa calls go unanswered. Here&#x27;s how to fix it with a 24/7 AI front desk that books appointments without staff overload.</p>
+    <div class="meta">AI Front Desk</div>
+  </div>
+</article><article class="article-card" data-cluster="National Pillar" data-category="AI Front Desk">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1575405369708-44948c7d9fcc?w=1600&q=80&auto=format&fit=crop" alt="Woman on phone outside a clinic" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">AI Front Desk</span>
+    <h3><a href="/reduce-no-shows-med-spa">How to Reduce No-Shows at a Med Spa by 50%</a></h3>
+    <p class="excerpt">Slash med spa no-shows with smart reminders, deposits, and AI follow-ups. Lift My Spa clients report up to 50% fewer no-shows.</p>
+    <div class="meta">AI Front Desk</div>
+  </div>
+</article><article class="article-card" data-cluster="State" data-category="State">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1648830258433-c365efb9a469?w=1600&q=80&auto=format&fit=crop" alt="Phoenix valley view from above" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">State</span>
+    <h3><a href="/arizona-med-spa-marketing-nursing-board-maricopa">Arizona Med Spa Marketing: Nursing Board + Maricopa Demand Boom</a></h3>
+    <p class="excerpt">Maricopa demand jumped 173% YoY. Marketing playbook + Arizona Nursing Board compliance for med spas, by Lift My Spa.</p>
+    <div class="meta">Arizona</div>
+  </div>
+</article><article class="article-card" data-cluster="State" data-category="State">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1706403222567-06fe8d8dc93e?w=1600&q=80&auto=format&fit=crop" alt="Aerial view of Phoenix with mountain backdrop" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">State</span>
+    <h3><a href="/best-marketing-system-med-spas-arizona">Best Marketing System for Med Spas in Arizona</a></h3>
+    <p class="excerpt">Maricopa County demand is up 173% YoY. Lift My Spa is the best marketing system for Arizona med spas to capture that growth.</p>
+    <div class="meta">Arizona</div>
+  </div>
+</article><article class="article-card" data-cluster="State" data-category="State">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1589083130544-0d6a2926e519?w=1600&q=80&auto=format&fit=crop" alt="Florida aerial view of city near water" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">State</span>
+    <h3><a href="/best-marketing-system-med-spas-florida">Best Marketing System for Med Spas in Florida</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing system for Florida med spas. Built for Miami, Orlando, Tampa and beyond. Bilingual and compliant.</p>
+    <div class="meta">Florida</div>
+  </div>
+</article><article class="article-card" data-cluster="State" data-category="State">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514693674-a32211b63996?w=1600&q=80&auto=format&fit=crop" alt="Med spa lounge with white chairs" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">State</span>
+    <h3><a href="/best-marketing-system-med-spas-oklahoma">Best Marketing System for Med Spas in Oklahoma</a></h3>
+    <p class="excerpt">Lift My Spa is expanding to Oklahoma. The best marketing system for OKC, Tulsa, Edmond and Norman med spas.</p>
+    <div class="meta">Oklahoma</div>
+  </div>
+</article><article class="article-card" data-cluster="State" data-category="State">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1648775507324-b48dd3791fa5?w=1600&q=80&auto=format&fit=crop" alt="Modern white aesthetic clinic interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">State</span>
+    <h3><a href="/best-marketing-system-med-spas-texas">Best Marketing System for Med Spas in Texas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing system for Texas med spas. AI front desk, automation, ads, and TDLR-aware compliance.</p>
+    <div class="meta">Texas</div>
+  </div>
+</article><article class="article-card" data-cluster="State" data-category="State">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">State</span>
+    <h3><a href="/florida-med-spa-board-of-medicine-advertising-rules">Florida Med Spa Marketing: Board of Medicine Advertising Rules Decoded</a></h3>
+    <p class="excerpt">Florida Board of Medicine advertising rules every med spa must follow. Stay compliant with Lift My Spa&#x27;s pre-built marketing templates.</p>
+    <div class="meta">Florida</div>
+  </div>
+</article><article class="article-card" data-cluster="State" data-category="State">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">State</span>
+    <h3><a href="/oklahoma-med-spa-marketing-compliance-growth">Oklahoma Med Spa Marketing: Compliance + Local Growth Playbook</a></h3>
+    <p class="excerpt">Compliance rules and a local growth playbook for Oklahoma med spas. Lift My Spa supports OKC, Tulsa and Edmond.</p>
+    <div class="meta">Oklahoma</div>
+  </div>
+</article><article class="article-card" data-cluster="State" data-category="State">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">State</span>
+    <h3><a href="/texas-med-spa-marketing-compliance-tdlr-tmb">Texas Med Spa Marketing Compliance: TDLR + TMB Rules You Must Follow in Ads</a></h3>
+    <p class="excerpt">TDLR and Texas Medical Board rules every Texas med spa must follow in ads. Avoid violations with Lift My Spa&#x27;s compliant templates.</p>
+    <div class="meta">Texas</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1706403222567-06fe8d8dc93e?w=1600&q=80&auto=format&fit=crop" alt="Aerial view of Phoenix with mountain backdrop" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-ai-front-desk-phoenix-med-spas">Best AI Front Desk for Phoenix Med Spas</a></h3>
+    <p class="excerpt">Maricopa search demand is up 173% YoY. Lift My Spa is the best AI front desk for Phoenix med spas to convert that boom.</p>
+    <div class="meta">Phoenix, AZ</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1648775507324-b48dd3791fa5?w=1600&q=80&auto=format&fit=crop" alt="Modern white aesthetic clinic interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-dallas-med-spas">Best Marketing Platform for Dallas Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Dallas med spas. AI front desk, automation, ads and compliant templates.</p>
+    <div class="meta">Dallas, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514709874-30eead90613b?w=1600&q=80&auto=format&fit=crop" alt="Wooden chairs in a modern spa interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-edmond-med-spas">Best Marketing Platform for Edmond Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Edmond med spas. Convert more leads with AI front desk and automated nurture.</p>
+    <div class="meta">Edmond, OK</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1512936702668-1ab037aced2a?w=1600&q=80&auto=format&fit=crop" alt="Beach pathway leading to ocean" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-jacksonville-med-spas">Best Marketing Platform for Jacksonville Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Jacksonville med spas. AI bookings, follow-ups, reviews, all built for med spas.</p>
+    <div class="meta">Jacksonville, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1571041804726-53e8bf082096?w=1600&q=80&auto=format&fit=crop" alt="Miami Beach with people enjoying the sun" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-miami-med-spas">Best Marketing Platform for Miami Med Spas</a></h3>
+    <p class="excerpt">Miami-Dade demand is up 41% YoY. Lift My Spa is the best marketing platform for Miami med spas, with bilingual AI included.</p>
+    <div class="meta">Miami, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1648775507324-b48dd3791fa5?w=1600&q=80&auto=format&fit=crop" alt="Modern white aesthetic clinic interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-oklahoma-city-med-spas">Best Marketing Platform for Oklahoma City Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Oklahoma City med spas. AI front desk, reviews, and referral systems built in.</p>
+    <div class="meta">Oklahoma City, OK</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?w=1600&q=80&auto=format&fit=crop" alt="Palm trees silhouette over Florida sunset" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-orlando-med-spas">Best Marketing Platform for Orlando Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Orlando med spas. Built for Central Florida med spa growth.</p>
+    <div class="meta">Orlando, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1648830258433-c365efb9a469?w=1600&q=80&auto=format&fit=crop" alt="Phoenix valley view from above" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-scottsdale-med-spas">Best Marketing Platform for Scottsdale Med Spas</a></h3>
+    <p class="excerpt">Scottsdale has one of the highest med spa per capita rates in the US. Lift My Spa is the best marketing platform for Scottsdale med spas.</p>
+    <div class="meta">Scottsdale, AZ</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1562517634-baa2da3acfbf?w=1600&q=80&auto=format&fit=crop" alt="Florida coastal buildings aerial view" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-system-fort-lauderdale-med-spas">Best Marketing System for Fort Lauderdale Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing system for Fort Lauderdale med spas. Capture the Broward demand surge with AI front desk + automation.</p>
+    <div class="meta">Fort Lauderdale, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514693674-a32211b63996?w=1600&q=80&auto=format&fit=crop" alt="Med spa lounge with white chairs" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-system-fort-worth-med-spas">Best Marketing System for Fort Worth Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing system for Fort Worth med spas. 24/7 AI front desk, automated reviews and referrals.</p>
+    <div class="meta">Fort Worth, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1700760933574-9f0f4ea9aa3b?w=1600&q=80&auto=format&fit=crop" alt="Aesthetic body treatment in a modern med spa" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-system-houston-med-spas">Best AI Front Desk + Marketing System for Houston Med Spas</a></h3>
+    <p class="excerpt">Houston med spa demand is the highest in Texas. Lift My Spa is the best AI front desk and marketing system for Houston med spas.</p>
+    <div class="meta">Houston, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514721772-329626f84c8b?w=1600&q=80&auto=format&fit=crop" alt="Modern med spa waiting room" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-system-san-antonio-med-spas">Best Marketing System for San Antonio Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing system for San Antonio med spas. Bilingual AI front desk and proven Texas templates.</p>
+    <div class="meta">San Antonio, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1727072258729-2e23be04fb67?w=1600&q=80&auto=format&fit=crop" alt="Arizona desert landscape with cacti" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-system-tucson-med-spas">Best Marketing System for Tucson Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing system for Tucson med spas. AI front desk, automated follow-ups, and reviews on autopilot.</p>
+    <div class="meta">Tucson, AZ</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514693674-a32211b63996?w=1600&q=80&auto=format&fit=crop" alt="Med spa lounge with white chairs" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-system-tulsa-med-spas">Best Marketing System for Tulsa Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing system for Tulsa med spas. AI front desk plus automation in one plug-and-play platform.</p>
+    <div class="meta">Tulsa, OK</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514709874-30eead90613b?w=1600&q=80&auto=format&fit=crop" alt="Wooden chairs in a modern spa interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-med-spa-marketing-software-austin">Best Med Spa Marketing Software in Austin</a></h3>
+    <p class="excerpt">Lift My Spa is the best med spa marketing software in Austin. Built for high-growth Travis County med spas.</p>
+    <div class="meta">City</div>
+  </div>
+</article><article class="article-card" data-cluster="Major Metro" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1647188234388-62f4b82ca08c?w=1600&q=80&auto=format&fit=crop" alt="Iconic Miami Beach lifeguard stand" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-med-spa-marketing-system-tampa">Best Med Spa Marketing System in Tampa</a></h3>
+    <p class="excerpt">Lift My Spa is the best med spa marketing system in Tampa. AI front desk, automated reviews, and compliant Florida templates.</p>
+    <div class="meta">City</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1589083130544-0d6a2926e519?w=1600&q=80&auto=format&fit=crop" alt="Florida aerial view of city near water" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-aventura-med-spas">Best Marketing Platform for Aventura Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Aventura med spas. Bilingual AI bookings and automated reviews.</p>
+    <div class="meta">Aventura, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1648775507324-b48dd3791fa5?w=1600&q=80&auto=format&fit=crop" alt="Modern white aesthetic clinic interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-bixby-med-spas">Best Marketing Platform for Bixby Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Bixby, OK med spas. 24/7 AI front desk for Tulsa County med spas.</p>
+    <div class="meta">Bixby, OK</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1512936702668-1ab037aced2a?w=1600&q=80&auto=format&fit=crop" alt="Beach pathway leading to ocean" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-boca-raton-med-spas">Best Marketing Platform for Boca Raton Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Boca Raton med spas. Premium AI front desk and concierge nurture flows.</p>
+    <div class="meta">Boca Raton, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1562517634-baa2da3acfbf?w=1600&q=80&auto=format&fit=crop" alt="Florida coastal buildings aerial view" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-brickell-med-spas">Best Marketing Platform for Brickell Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Brickell med spas. 24/7 bilingual AI front desk for downtown Miami clinics.</p>
+    <div class="meta">Brickell, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514709874-30eead90613b?w=1600&q=80&auto=format&fit=crop" alt="Wooden chairs in a modern spa interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-broken-arrow-med-spas">Best Marketing Platform for Broken Arrow Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Broken Arrow med spas. AI front desk and review automation for OK clinics.</p>
+    <div class="meta">Broken Arrow, OK</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1700374377059-d23a6a1244dd?w=1600&q=80&auto=format&fit=crop" alt="Large saguaro cactus with Arizona mountains" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-chandler-med-spas">Best Marketing Platform for Chandler Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Chandler med spas. 24/7 AI bookings and proven Maricopa-area templates.</p>
+    <div class="meta">Chandler, AZ</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?w=1600&q=80&auto=format&fit=crop" alt="Palm trees silhouette over Florida sunset" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-coral-gables-med-spas">Best Marketing Platform for Coral Gables Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Coral Gables med spas. Bilingual AI front desk for Miami-Dade clinics.</p>
+    <div class="meta">Coral Gables, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1589083130544-0d6a2926e519?w=1600&q=80&auto=format&fit=crop" alt="Florida aerial view of city near water" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-doral-med-spas">Best Marketing Platform for Doral Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Doral med spas. Bilingual AI front desk built for Miami-Dade.</p>
+    <div class="meta">Doral, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1648830258433-c365efb9a469?w=1600&q=80&auto=format&fit=crop" alt="Phoenix valley view from above" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-flagstaff-med-spas">Best Marketing Platform for Flagstaff Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Flagstaff med spas. 24/7 AI front desk and automated reviews.</p>
+    <div class="meta">Flagstaff, AZ</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514693674-a32211b63996?w=1600&q=80&auto=format&fit=crop" alt="Med spa lounge with white chairs" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-frisco-med-spas">Best Marketing Platform for Frisco Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Frisco med spas. Capture high-growth DFW demand with AI front desk + automation.</p>
+    <div class="meta">Frisco, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1591155033309-fe509a7cf426?w=1600&q=80&auto=format&fit=crop" alt="Arizona mountain landscape" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-gilbert-med-spas">Best Marketing Platform for Gilbert Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Gilbert med spas. AI front desk, automated reviews, and referral flows.</p>
+    <div class="meta">Gilbert, AZ</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1706403222567-06fe8d8dc93e?w=1600&q=80&auto=format&fit=crop" alt="Aerial view of Phoenix with mountain backdrop" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-glendale-az-med-spas">Best Marketing Platform for Glendale (AZ) Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Glendale, AZ med spas. AI front desk and automation built for med spas.</p>
+    <div class="meta">City</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514709874-30eead90613b?w=1600&q=80&auto=format&fit=crop" alt="Wooden chairs in a modern spa interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-katy-med-spas">Best Marketing Platform for Katy Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Katy, TX med spas. 24/7 AI bookings and automated nurture for med spas.</p>
+    <div class="meta">Katy, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-lakeway-med-spas">Best Marketing Platform for Lakeway Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Lakeway med spas. Concierge AI front desk for Lake Travis-area clinics.</p>
+    <div class="meta">Lakeway, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514709874-30eead90613b?w=1600&q=80&auto=format&fit=crop" alt="Wooden chairs in a modern spa interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-mckinney-med-spas">Best Marketing Platform for McKinney Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for McKinney med spas. AI front desk, follow-ups, and review flows.</p>
+    <div class="meta">McKinney, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1589046207215-b5ee3097bafc?w=1600&q=80&auto=format&fit=crop" alt="Arizona cactus silhouette at sunset" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-mesa-med-spas">Best Marketing Platform for Mesa Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Mesa med spas. Built to capture Maricopa&#x27;s 173% YoY demand growth.</p>
+    <div class="meta">Mesa, AZ</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1647188234388-62f4b82ca08c?w=1600&q=80&auto=format&fit=crop" alt="Iconic Miami Beach lifeguard stand" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-naples-med-spas">Best Marketing Platform for Naples Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Naples, FL med spas. Concierge AI front desk for SW Florida clientele.</p>
+    <div class="meta">Naples, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514693674-a32211b63996?w=1600&q=80&auto=format&fit=crop" alt="Med spa lounge with white chairs" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-norman-med-spas">Best Marketing Platform for Norman Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Norman, OK med spas. AI front desk and automated nurture flows.</p>
+    <div class="meta">Norman, OK</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-owasso-med-spas">Best Marketing Platform for Owasso Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Owasso med spas. AI front desk and automated reviews for OK med spas.</p>
+    <div class="meta">Owasso, OK</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1512936702668-1ab037aced2a?w=1600&q=80&auto=format&fit=crop" alt="Beach pathway leading to ocean" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-palm-beach-gardens-med-spas">Best Marketing Platform for Palm Beach Gardens Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Palm Beach Gardens med spas. Premium AI front desk and reputation automation.</p>
+    <div class="meta">Palm Beach Gardens, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1648830258433-c365efb9a469?w=1600&q=80&auto=format&fit=crop" alt="Phoenix valley view from above" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-paradise-valley-med-spas">Best Marketing Platform for Paradise Valley Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Paradise Valley med spas. Luxury-grade AI front desk and concierge automation.</p>
+    <div class="meta">Paradise Valley, AZ</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-pearland-med-spas">Best Marketing Platform for Pearland Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Pearland med spas. AI front desk, reviews, and referrals on autopilot.</p>
+    <div class="meta">Pearland, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514721772-329626f84c8b?w=1600&q=80&auto=format&fit=crop" alt="Modern med spa waiting room" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-plano-med-spas">Best Marketing Platform for Plano Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Plano med spas. AI receptionist and Dallas-area marketing automation.</p>
+    <div class="meta">Plano, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1700760933574-9f0f4ea9aa3b?w=1600&q=80&auto=format&fit=crop" alt="Aesthetic body treatment in a modern med spa" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-round-rock-med-spas">Best Marketing Platform for Round Rock Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Round Rock med spas. Capture Greater Austin demand with AI bookings.</p>
+    <div class="meta">Round Rock, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1571041804726-53e8bf082096?w=1600&q=80&auto=format&fit=crop" alt="Miami Beach with people enjoying the sun" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-sarasota-med-spas">Best Marketing Platform for Sarasota Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Sarasota med spas. AI front desk and Florida-compliant marketing templates.</p>
+    <div class="meta">Sarasota, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1591155033309-fe509a7cf426?w=1600&q=80&auto=format&fit=crop" alt="Arizona mountain landscape" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-sedona-med-spas">Best Marketing Platform for Sedona Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Sedona med spas. Concierge-grade AI front desk and reputation flows.</p>
+    <div class="meta">Sedona, AZ</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1648775507324-b48dd3791fa5?w=1600&q=80&auto=format&fit=crop" alt="Modern white aesthetic clinic interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-southlake-med-spas">Best Marketing Platform for Southlake Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Southlake med spas. Concierge AI front desk for premium DFW clientele.</p>
+    <div class="meta">Southlake, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1648775507324-b48dd3791fa5?w=1600&q=80&auto=format&fit=crop" alt="Modern white aesthetic clinic interior" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-sugar-land-med-spas">Best Marketing Platform for Sugar Land Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Sugar Land med spas. Bilingual AI front desk and automation for Texas spas.</p>
+    <div class="meta">Sugar Land, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1727072258729-2e23be04fb67?w=1600&q=80&auto=format&fit=crop" alt="Arizona desert landscape with cacti" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-tempe-med-spas">Best Marketing Platform for Tempe Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Tempe med spas. AI receptionist, nurture flows, and HIPAA-aware templates.</p>
+    <div class="meta">Tempe, AZ</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731514693674-a32211b63996?w=1600&q=80&auto=format&fit=crop" alt="Med spa lounge with white chairs" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-the-woodlands-med-spas">Best Marketing Platform for The Woodlands Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for The Woodlands med spas. AI front desk, automation, and Texas-compliant templates.</p>
+    <div class="meta">The Woodlands, TX</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?w=1600&q=80&auto=format&fit=crop" alt="Palm trees silhouette over Florida sunset" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-weston-med-spas">Best Marketing Platform for Weston Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Weston med spas. AI front desk and automated reviews for Broward clinics.</p>
+    <div class="meta">Weston, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Town/Suburb" data-category="City">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?w=1600&q=80&auto=format&fit=crop" alt="Palm trees silhouette over Florida sunset" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">City</span>
+    <h3><a href="/best-marketing-platform-winter-park-med-spas">Best Marketing Platform for Winter Park Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best marketing platform for Winter Park med spas. AI bookings and automated nurture for Orlando-area clinics.</p>
+    <div class="meta">Winter Park, FL</div>
+  </div>
+</article><article class="article-card" data-cluster="Pain-Point" data-category="Marketing Automation">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1558731991-cb3430a08bb7?w=1600&q=80&auto=format&fit=crop" alt="Person making a phone call on smartphone" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Marketing Automation</span>
+    <h3><a href="/200k-missed-calls-med-spa-revenue-leak">The $200K Leak: Why Med Spas Lose This Much From Missed Calls Each Year</a></h3>
+    <p class="excerpt">Med spas can lose up to $200K per year from missed calls. Here&#x27;s the full math and how Lift My Spa&#x27;s AI front desk plugs the leak.</p>
+    <div class="meta">Marketing Automation</div>
+  </div>
+</article><article class="article-card" data-cluster="Pain-Point" data-category="Marketing Automation">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1575405369708-44948c7d9fcc?w=1600&q=80&auto=format&fit=crop" alt="Woman on phone outside a clinic" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Marketing Automation</span>
+    <h3><a href="/after-hours-med-spa-bookings">After-Hours Bookings: Why 40% of Med Spa Demand Hits When You&#x27;re Closed</a></h3>
+    <p class="excerpt">40% of med spa booking demand happens when you&#x27;re closed. Lift My Spa&#x27;s 24/7 AI front desk captures every minute of it.</p>
+    <div class="meta">Marketing Automation</div>
+  </div>
+</article><article class="article-card" data-cluster="Pain-Point" data-category="Marketing Automation">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?w=1600&q=80&auto=format&fit=crop" alt="Front desk agent wearing a headset" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Marketing Automation</span>
+    <h3><a href="/front-desk-burnout-med-spa">Front Desk Burnout: The Hidden Tax on Med Spa Growth</a></h3>
+    <p class="excerpt">Front desk overload is killing med spa growth. Lift My Spa&#x27;s AI assistant takes the load off so your team can focus on clients.</p>
+    <div class="meta">Marketing Automation</div>
+  </div>
+</article><article class="article-card" data-cluster="Pain-Point" data-category="Marketing Automation">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80&auto=format&fit=crop" alt="Performance analytics graphs on a laptop" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Marketing Automation</span>
+    <h3><a href="/med-spa-marketing-agency-survival-guide">&quot;We Tried an Agency and Got Burned&quot; A Survival Guide for Med Spa Owners</a></h3>
+    <p class="excerpt">Tired of getting burned by agencies? A med spa owner&#x27;s survival guide to vetting, contracts, and why Lift My Spa is different.</p>
+    <div class="meta">Marketing Automation</div>
+  </div>
+</article><article class="article-card" data-cluster="Pain-Point" data-category="Marketing Automation">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?w=1600&q=80&auto=format&fit=crop" alt="Data dashboard with marketing metrics" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Marketing Automation</span>
+    <h3><a href="/med-spa-reactivation-lapsed-clients">Med Spa Reactivation: How to Win Back Lapsed Clients on Autopilot</a></h3>
+    <p class="excerpt">Win back lapsed med spa clients with automated reactivation flows. Lift My Spa includes 4 pre-built reactivation campaigns.</p>
+    <div class="meta">Marketing Automation</div>
+  </div>
+</article><article class="article-card" data-cluster="Pain-Point" data-category="Marketing Automation">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Marketing Automation</span>
+    <h3><a href="/real-cost-no-show-med-spa">The Real Cost of a No-Show at a Med Spa and How to Eliminate It</a></h3>
+    <p class="excerpt">A single no-show can cost a med spa hundreds to thousands. Lift My Spa eliminates them with deposits, reminders, and AI follow-ups.</p>
+    <div class="meta">Marketing Automation</div>
+  </div>
+</article><article class="article-card" data-cluster="Pain-Point" data-category="Marketing Automation">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1736572784183-0c1d97223d58?w=1600&q=80&auto=format&fit=crop" alt="Computer screen showing Google reviews" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Marketing Automation</span>
+    <h3><a href="/why-google-reviews-stuck-med-spa">Why Your Google Reviews Are Stuck (and a System That Adds 60% More)</a></h3>
+    <p class="excerpt">Stuck on Google reviews? Lift My Spa clients see up to 60% more 5-star reviews with automated request flows.</p>
+    <div class="meta">Marketing Automation</div>
+  </div>
+</article><article class="article-card" data-cluster="Pain-Point" data-category="Marketing Automation">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1633613286991-611fe299c4be?w=1600&q=80&auto=format&fit=crop" alt="Five-star reviews on a colorful surface" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Marketing Automation</span>
+    <h3><a href="/why-happy-med-spa-clients-dont-refer">Why 83% of Happy Med Spa Clients Never Refer (and How to Fix It)</a></h3>
+    <p class="excerpt">83% of happy med spa clients say they&#x27;d refer; only 29% do. Lift My Spa fixes the gap with automated referral flows.</p>
+    <div class="meta">Marketing Automation</div>
+  </div>
+</article><article class="article-card" data-cluster="Pain-Point" data-category="Marketing Automation">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1600&q=80&auto=format&fit=crop" alt="Marketing analytics dashboard on monitor" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Marketing Automation</span>
+    <h3><a href="/why-med-spa-ads-not-converting">The Real Reason Your Med Spa Ads Aren&#x27;t Converting</a></h3>
+    <p class="excerpt">Bad conversions aren&#x27;t usually the ad&#x27;s fault. It&#x27;s the funnel. Lift My Spa fixes the conversion gap with AI follow-ups.</p>
+    <div class="meta">Marketing Automation</div>
+  </div>
+</article><article class="article-card" data-cluster="Pain-Point" data-category="Marketing Automation">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1553775282-20af80779df7?w=1600&q=80&auto=format&fit=crop" alt="Customer service headset next to laptop" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Marketing Automation</span>
+    <h3><a href="/why-med-spa-leads-go-cold">Why Med Spa Leads Go Cold in 5 Minutes (and the Follow-Up Fix)</a></h3>
+    <p class="excerpt">Med spa leads go cold in 5 minutes if you don&#x27;t reply. Lift My Spa&#x27;s AI follows up instantly, day or night.</p>
+    <div class="meta">Marketing Automation</div>
+  </div>
+</article><article class="article-card" data-cluster="Service-Specific" data-category="Service Marketing">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1600&q=80&auto=format&fit=crop" alt="Woman receiving facial cream application" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Service Marketing</span>
+    <h3><a href="/how-to-market-botox-med-spa">How to Market Botox at Your Med Spa (Without Burning Ad Spend)</a></h3>
+    <p class="excerpt">Stop wasting ad spend on Botox campaigns. Lift My Spa shows you how to convert Botox leads into booked, repeat clients.</p>
+    <div class="meta">Service Marketing</div>
+  </div>
+</article><article class="article-card" data-cluster="Service-Specific" data-category="Service Marketing">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1731355771317-b2ab72c79124?w=1600&q=80&auto=format&fit=crop" alt="Woman receiving a facial mask treatment" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Service Marketing</span>
+    <h3><a href="/how-to-market-hydrafacial">How to Market HydraFacial as a Year-Round Revenue Driver</a></h3>
+    <p class="excerpt">HydraFacial is one of the best repeat-revenue services in a med spa. Here&#x27;s how to market it monthly with Lift My Spa.</p>
+    <div class="meta">Service Marketing</div>
+  </div>
+</article><article class="article-card" data-cluster="Service-Specific" data-category="Service Marketing">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1768881187102-ca0131989c8a?w=1600&q=80&auto=format&fit=crop" alt="Premium skincare products on shelf" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Service Marketing</span>
+    <h3><a href="/how-to-sell-iv-therapy-wellness-addons">How to Sell IV Therapy and Wellness Add-Ons Without Looking Salesy</a></h3>
+    <p class="excerpt">Sell IV therapy and wellness add-ons without sounding pushy. A trust-first playbook with Lift My Spa&#x27;s nurture flows.</p>
+    <div class="meta">Service Marketing</div>
+  </div>
+</article><article class="article-card" data-cluster="Service-Specific" data-category="Service Marketing">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1754941622117-97957c5d669b?w=1600&q=80&auto=format&fit=crop" alt="Red light therapy device on skin" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Service Marketing</span>
+    <h3><a href="/laser-hair-removal-promos-that-convert">Laser Hair Removal Promos That Actually Convert</a></h3>
+    <p class="excerpt">Stop blasting LHR coupons. Here&#x27;s the promo framework that actually converts, paired with Lift My Spa&#x27;s automation.</p>
+    <div class="meta">Service Marketing</div>
+  </div>
+</article><article class="article-card" data-cluster="Service-Specific" data-category="Service Marketing">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1571041804726-53e8bf082096?w=1600&q=80&auto=format&fit=crop" alt="Miami Beach with people enjoying the sun" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Service Marketing</span>
+    <h3><a href="/market-coolsculpting-body-contouring-florida">How to Promote CoolSculpting and Body Contouring in Florida</a></h3>
+    <p class="excerpt">Florida is the top body-contouring market in the US. Here&#x27;s how to promote CoolSculpting and convert leads with Lift My Spa.</p>
+    <div class="meta">Florida</div>
+  </div>
+</article><article class="article-card" data-cluster="Service-Specific" data-category="Service Marketing">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1754941622136-6664a3f50b2e?w=1600&q=80&auto=format&fit=crop" alt="Laser therapy device in clinical use" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Service Marketing</span>
+    <h3><a href="/market-morpheus8-rf-microneedling-arizona">How to Market Morpheus8 and RF Microneedling in Arizona</a></h3>
+    <p class="excerpt">Marketing playbook for Morpheus8 and RF microneedling in Arizona. Convert ad clicks into booked treatments with Lift My Spa.</p>
+    <div class="meta">Arizona</div>
+  </div>
+</article><article class="article-card" data-cluster="Service-Specific" data-category="Service Marketing">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=1600&q=80&auto=format&fit=crop" alt="Woman receiving facial sculpting treatment" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Service Marketing</span>
+    <h3><a href="/marketing-lip-filler-texas">Marketing Lip Filler in Texas: What Works in 2026</a></h3>
+    <p class="excerpt">A 2026 playbook for marketing lip filler in Texas, plus the AI follow-up system that converts Instagram traffic to booked appointments.</p>
+    <div class="meta">Texas</div>
+  </div>
+</article><article class="article-card" data-cluster="Service-Specific" data-category="Service Marketing">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1726750973468-0d273fc6d6dd?w=1600&q=80&auto=format&fit=crop" alt="Premium facial serum bottles" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Service Marketing</span>
+    <h3><a href="/marketing-medical-weight-loss-bible-belt">Marketing Medical Weight Loss in the Bible Belt (OK + TX Playbook)</a></h3>
+    <p class="excerpt">A Bible Belt playbook for marketing medical weight loss programs at med spas in Oklahoma and Texas, with Lift My Spa.</p>
+    <div class="meta">Service Marketing</div>
+  </div>
+</article><article class="article-card" data-cluster="Service-Specific" data-category="Service Marketing">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1630398777649-cdfc7c5e8a24?w=1600&q=80&auto=format&fit=crop" alt="Luxury skincare bottles arranged on table" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Service Marketing</span>
+    <h3><a href="/marketing-semaglutide-glp1-med-spa">Selling Semaglutide / GLP-1 Programs at Your Med Spa: Marketing Playbook</a></h3>
+    <p class="excerpt">A compliance-aware marketing playbook for semaglutide and GLP-1 programs at med spas. Built for TX, FL, AZ, OK.</p>
+    <div class="meta">Service Marketing</div>
+  </div>
+</article><article class="article-card" data-cluster="Service-Specific" data-category="Service Marketing">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?w=1600&q=80&auto=format&fit=crop" alt="Modern laptop with marketing tools open" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Service Marketing</span>
+    <h3><a href="/med-spa-memberships-vs-packages">Memberships vs Packages: Which Sells Better at a Med Spa?</a></h3>
+    <p class="excerpt">Memberships or packages. Which drives more revenue at your med spa? Decision framework plus Lift My Spa&#x27;s automation.</p>
+    <div class="meta">Service Marketing</div>
+  </div>
+</article><article class="article-card" data-cluster="Comparison" data-category="Comparisons">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?w=1600&q=80&auto=format&fit=crop" alt="Data dashboard with marketing metrics" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Comparisons</span>
+    <h3><a href="/lift-my-spa-vs-boulevard-for-med-spas">Lift My Spa vs Boulevard for Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa beats Boulevard for med spas with built-in AI front desk, pre-built workflows, and HIPAA-aware templates.</p>
+    <div class="meta">Comparisons</div>
+  </div>
+</article><article class="article-card" data-cluster="Comparison" data-category="Comparisons">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?w=1600&q=80&auto=format&fit=crop" alt="Front desk agent wearing a headset" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Comparisons</span>
+    <h3><a href="/lift-my-spa-vs-front-desk-receptionist">Lift My Spa vs Hiring a Full-Time Front Desk Receptionist</a></h3>
+    <p class="excerpt">Lift My Spa vs a full-time receptionist. Compare cost, coverage, and conversion side by side for med spas.</p>
+    <div class="meta">Comparisons</div>
+  </div>
+</article><article class="article-card" data-cluster="Comparison" data-category="Comparisons">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1626863905121-3b0c0ed7b94c?w=1600&q=80&auto=format&fit=crop" alt="Receptionist with headset answering calls" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Comparisons</span>
+    <h3><a href="/lift-my-spa-vs-generic-ai-chatbots">Lift My Spa vs Generic AI Chatbots (Why Industry-Specific Wins)</a></h3>
+    <p class="excerpt">Generic AI chatbots can&#x27;t book Botox. Lift My Spa is trained on med spa workflows, services, and compliance from day one.</p>
+    <div class="meta">Comparisons</div>
+  </div>
+</article><article class="article-card" data-cluster="Comparison" data-category="Comparisons">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80&auto=format&fit=crop" alt="Performance analytics graphs on a laptop" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Comparisons</span>
+    <h3><a href="/lift-my-spa-vs-glossgenius-for-med-spas">Lift My Spa vs GlossGenius for Med Spas</a></h3>
+    <p class="excerpt">GlossGenius is built for stylists. Lift My Spa is built only for med spas. AI front desk, compliance, and conversion.</p>
+    <div class="meta">Comparisons</div>
+  </div>
+</article><article class="article-card" data-cluster="Comparison" data-category="Comparisons">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80&auto=format&fit=crop" alt="Performance analytics graphs on a laptop" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Comparisons</span>
+    <h3><a href="/lift-my-spa-vs-hiring-marketing-agency">Lift My Spa vs Hiring a Marketing Agency</a></h3>
+    <p class="excerpt">Lift My Spa vs hiring a marketing agency. Side-by-side comparison of cost, control, and conversion for med spa owners.</p>
+    <div class="meta">Comparisons</div>
+  </div>
+</article><article class="article-card" data-cluster="Comparison" data-category="Comparisons">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1600&q=80&auto=format&fit=crop" alt="Marketing analytics dashboard on monitor" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Comparisons</span>
+    <h3><a href="/lift-my-spa-vs-repeatmd-for-med-spas">Lift My Spa vs RepeatMD for Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa vs RepeatMD: AI front desk, marketing automation, and ads in one platform without the enterprise cost.</p>
+    <div class="meta">Comparisons</div>
+  </div>
+</article><article class="article-card" data-cluster="Comparison" data-category="Comparisons">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?w=1600&q=80&auto=format&fit=crop" alt="Modern laptop with marketing tools open" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Comparisons</span>
+    <h3><a href="/lift-my-spa-vs-vagaro-for-med-spas">Lift My Spa vs Vagaro for Med Spas</a></h3>
+    <p class="excerpt">Lift My Spa is the best Vagaro alternative for med spas. AI front desk, conversion flows, and pre-built nurture included.</p>
+    <div class="meta">Comparisons</div>
+  </div>
+</article><article class="article-card" data-cluster="Comparison" data-category="Comparisons">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1686061593213-98dad7c599b9?w=1600&q=80&auto=format&fit=crop" alt="Marketing performance data on screen" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Comparisons</span>
+    <h3><a href="/lift-my-spa-vs-zenoti-for-med-spas">Lift My Spa vs Zenoti for Med Spas</a></h3>
+    <p class="excerpt">Zenoti is enterprise-heavy. Lift My Spa gives small and mid-size med spas the same automation power without the bloat.</p>
+    <div class="meta">Comparisons</div>
+  </div>
+</article><article class="article-card" data-cluster="Compliance" data-category="Compliance">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Compliance</span>
+    <h3><a href="/arizona-nursing-board-med-spa-marketing-compliance">Arizona Nursing Board Med Spa Marketing Compliance Checklist</a></h3>
+    <p class="excerpt">A full Arizona Nursing Board marketing compliance checklist for med spas. Stay safe with Lift My Spa&#x27;s pre-built templates.</p>
+    <div class="meta">Arizona</div>
+  </div>
+</article><article class="article-card" data-cluster="Compliance" data-category="Compliance">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1626863905121-3b0c0ed7b94c?w=1600&q=80&auto=format&fit=crop" alt="Receptionist with headset answering calls" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Compliance</span>
+    <h3><a href="/can-med-spa-use-ai-chatbots-compliance">Can a Med Spa Use AI Chatbots? Compliance Guide for TX, FL, AZ, OK</a></h3>
+    <p class="excerpt">Yes, med spas can use AI chatbots in TX, FL, AZ, OK with the right setup. Lift My Spa is built for compliant AI bookings.</p>
+    <div class="meta">Compliance</div>
+  </div>
+</article><article class="article-card" data-cluster="Compliance" data-category="Compliance">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Compliance</span>
+    <h3><a href="/florida-board-of-medicine-cosmetic-advertising-rules">Florida Board of Medicine Cosmetic Advertising Rules Explained</a></h3>
+    <p class="excerpt">Florida Board of Medicine rules every med spa must follow in cosmetic advertising. Stay compliant with Lift My Spa&#x27;s templates.</p>
+    <div class="meta">Florida</div>
+  </div>
+</article><article class="article-card" data-cluster="Compliance" data-category="Compliance">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1713085085470-fba013d67e65?w=1600&q=80&auto=format&fit=crop" alt="Doctor performing a facial peel treatment" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Compliance</span>
+    <h3><a href="/hipaa-before-after-photos-med-spa-ads">HIPAA + Before/After Photos in Med Spa Ads: A Practical Guide</a></h3>
+    <p class="excerpt">A practical HIPAA-compliant guide to using before/after photos in med spa ads, with consent templates from Lift My Spa.</p>
+    <div class="meta">Compliance</div>
+  </div>
+</article><article class="article-card" data-cluster="Compliance" data-category="Compliance">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Compliance</span>
+    <h3><a href="/oklahoma-med-spa-compliance-marketing-telehealth">Oklahoma Med Spa Compliance: Marketing Telehealth and AI Bots</a></h3>
+    <p class="excerpt">Oklahoma marketing, telehealth, and AI bot compliance for med spas. Stay legal with Lift My Spa&#x27;s pre-built templates.</p>
+    <div class="meta">Oklahoma</div>
+  </div>
+</article><article class="article-card" data-cluster="Compliance" data-category="Compliance">
+  <div class="article-card-image">
+    <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=1600&q=80&auto=format&fit=crop" alt="Modern consultation room with desk" loading="lazy">
+  </div>
+  <div class="article-card-body">
+    <span class="article-card-tag">Compliance</span>
+    <h3><a href="/texas-med-spa-advertising-laws">Texas Med Spa Advertising Laws: What You Can and Can&#x27;t Say in Marketing</a></h3>
+    <p class="excerpt">A plain-English guide to Texas med spa advertising laws (TDLR, TMB, FTC) with compliant Lift My Spa templates.</p>
+    <div class="meta">Texas</div>
+  </div>
+</article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="container-narrow">
+    <h2>Med spa marketing insights you can actually use.</h2>
+    <p>Want a personal walkthrough of how Lift My Spa would work for your clinic? Book a free 30-minute consultation. No pressure.</p>
+    <a href="https://liftmyspa.com/demo-call-page" class="btn btn-light" style="font-size:1rem; padding:16px 32px;">Schedule Free Consultation</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a href="https://liftmyspa.com" class="footer-logo">
+        <img src="logo-white.webp" alt="Lift My Spa">
+      </a>
+      <nav class="footer-nav">
+        <a href="https://liftmyspa.com/terms-conditions" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
+        <a href="https://liftmyspa.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">Liftmyspa.com &copy; Copyright. All rights Reserved.</p>
+      <p class="footer-disclaimer">All Lift My Spa services are non-clinical and are designed to support marketing and communication for licensed medical spas. We do not provide medical advice, diagnosis, or treatment. Client results may vary. Referral programs, offers, and testimonial use must comply with applicable federal (including HIPAA and FTC) and state regulations (TX, FL, AZ, OK). Review automation, lead generation, and performance metrics are based on reported data and not guaranteed. All tools are designed to follow HIPAA privacy standards and advertising guidelines set by ad platforms and state medical boards. Contact us for compliance details.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Category filter (client-side)
+  (function() {
+    var grid = document.getElementById('articles-grid');
+    var nav = document.getElementById('cat-filter');
+    if (!grid || !nav) return;
+    nav.addEventListener('click', function(e) {
+      var t = e.target.closest('a');
+      if (!t) return;
+      e.preventDefault();
+      var url = new URL(t.href, window.location.origin);
+      var cat = url.searchParams.get('cat');
+      [].forEach.call(nav.querySelectorAll('a'), function(a) { a.classList.remove('active'); });
+      t.classList.add('active');
+      var label = t.textContent.trim();
+      [].forEach.call(grid.querySelectorAll('.article-card'), function(card) {
+        if (label === 'All Articles' || card.dataset.category === label) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+    // Apply filter from URL on load
+    var urlCat = new URLSearchParams(window.location.search).get('cat');
+    if (urlCat) {
+      var match = nav.querySelector('a[href*="cat=' + urlCat + '"]');
+      if (match) match.click();
+    }
+  })();
+</script>
+
+</body>
+</html>

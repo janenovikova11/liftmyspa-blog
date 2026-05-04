@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Lift My Spa — Marketing Insights for Med Spa Owners</title>
+<meta name="description" content="Marketing playbooks, AI front desk strategies, and growth insights built only for med spa owners in TX, FL, AZ, and OK.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="brand.css">
+<style>
+  /* ===== Blog Index specific ===== */
+  .blog-hero {
+    background: var(--brand-cream);
+    padding: 80px 0 64px;
+    text-align: center;
+    border-bottom: 1px solid var(--neutral-300);
+  }
+  .blog-hero .eyebrow {
+    display: inline-block;
+    background: var(--brand-red);
+    color: var(--text-on-red);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-family: var(--headline-font);
+    font-weight: 700;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 22px;
+  }
+  .blog-hero h1 {
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    margin-bottom: 16px;
+    color: var(--text-primary);
+    font-weight: 900;
+  }
+  .blog-hero p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* Category bar */
+  .category-bar {
+    border-bottom: 1px solid var(--neutral-300);
+    padding: 18px 0;
+    background: var(--neutral-100);
+    position: sticky;
+    top: 89px;
+    z-index: 50;
+  }
+  .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  .category-list a {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: var(--brand-cream);
+    color: var(--text-primary);
+    font-family: var(--headline-font);
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.15s;
+  }
+  .category-list a:hover {
+    background: var(--brand-red);
+    color: var(--text-on-red);
+  }
+  .category-list a.active {
+    background: var(--brand-red);
+    color: var(--text-on-red);
+  }
+
+  /* Featured */
+  .featured-section { padding: 64px 0 0; }
+  .featured-post {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+    align-items: stretch;
+    background: var(--brand-cream);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .featured-image {
+    background: var(--brand-red);
+    min-height: 360px;
+    display: flex;
+    align-items: flex-end;
+    padding: 32px;
+    position: relative;
+    background-image:
+      linear-gradient(180deg, rgba(149,8,25,0.25) 0%, rgba(149,8,25,0.85) 100%),
+      url('https://images.unsplash.com/photo-1626863905121-3b0c0ed7b94c?w=1600&q=80&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+  .featured-image .badge {
+    background: var(--text-on-red);
+    color: var(--brand-red);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-family: var(--headline-font);
+    font-weight: 700;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .featured-content {
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .featured-content .meta {
+    color: var(--brand-red);
+    font-size: 0.82rem;
+    font-family: var(--headline-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+  }
+  .featured-content h2 {
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .featured-content h2 a { color: var(--text-primary); }
+  .featured-content h2 a:hover { color: var(--brand-red); }
+  .featured-content .excerpt {
+    color: var(--text-secondary);
+    font-size: 1.02rem;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 880px) {
+    .featured-post { grid-template-columns: 1fr; }
+    .featured-content { padding: 32px 24px; }
+  }
+
+  /* Article grid */
+  .articles-section { padding: 80px 0 0; }
+  .articles-section h2 { margin-bottom: 32px; font-weight: 800; }
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .article-card {
+    background: var(--neutral-100);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--neutral-300);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--brand-red);
+  }
+  .article-card-image {
+    aspect-ratio: 16/10;
+    background: var(--brand-cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .article-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .article-card-body {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .article-card-tag {
+    display: inline-block;
+    background: var(--brand-red-soft);
+    color: var(--brand-red);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-family: var(--headline-font);
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+  .article-card h3 {
+    font-size: 1.12rem;
+    margin-bottom: 12px;
+    line-height: 1.35;
+    font-weight: 700;
+  }
+  .article-card h3 a { color: var(--text-primary); }
+  .article-card h3 a:hover { color: var(--brand-red); }
+  .article-card .excerpt {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+    flex-grow: 1;
+  }
+  .article-card .meta {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-family: var(--headline-font);
+    font-weight: 600;
+  }
+  @media (max-width: 880px) {
+    .articles-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 540px) {
+    .articles-grid { grid-template-columns: 1fr; }
+  }
+
+  /* CTA strip */
+  .cta-strip {
+    background: var(--brand-red);
+    color: var(--text-on-red);
+    padding: 64px 0;
+    margin-top: 80px;
+    text-align: center;
+  }
+  .cta-strip h2 {
+    color: var(--text-on-red);
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    margin-bottom: 14px;
+    font-weight: 800;
+  }
+  .cta-strip p {
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 580px;
+    margin: 0 auto 28px;
+    font-size: 1.05rem;
+  }
+  .cta-form {
+    display: flex;
+    gap: 12px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .cta-form input {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 999px;
+    border: none;
+    font-size: 0.95rem;
+    font-family: var(--body-font);
+    color: var(--text-primary);
+  }
+  @media (max-width: 540px) {
+    .cta-form { flex-direction: column; }
+  }
+
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 56px;
+  }
+  .pagination a, .pagination span {
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    font-family: var(--headline-font);
+    font-weight: 700;
+    color: var(--text-primary);
+    background: var(--brand-cream);
+    min-width: 44px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .pagination .current { background: var(--brand-red); color: var(--text-on-red); }
+  .pagination a:hover { background: var(--brand-red); color: var(--text-on-red); }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER (clones liftmyspa.com) ============ -->
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="https://liftmyspa.com" class="logo">
+      <img src="logo-red.png" alt="Lift My Spa">
+    </a>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="https://liftmyspa.com">Home</a></li>
+        <li><a href="/" class="active">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <span class="header-region">AZ · TX · FL · OK</span>
+      <a href="https://liftmyspa.com/#contact" class="btn btn-primary btn-sm">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="blog-hero">
+  <div class="container-narrow">
+    <span class="eyebrow">Lift My Spa Blog</span>
+    <h1>Marketing Playbooks for Med Spa Owners</h1>
+    <p>AI front desk strategies, conversion frameworks, and compliance guides built only for med spas in Texas, Florida, Arizona, and Oklahoma.</p>
+  </div>
+</section>
+
+<!-- ============ CATEGORY BAR ============ -->
+<div class="category-bar">
+  <div class="container">
+    <ul class="category-list">
+      <li><a href="#" class="active">All Articles</a></li>
+      <li><a href="#">AI Front Desk</a></li>
+      <li><a href="#">Marketing Automation</a></li>
+      <li><a href="#">State</a></li>
+      <li><a href="#">City</a></li>
+      <li><a href="#">Compliance</a></li>
+      <li><a href="#">Service Marketing</a></li>
+      <li><a href="#">Comparisons</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ FEATURED POST ============ -->
+<section class="featured-section">
+  <div class="container">
+    <div class="featured-post">
+      <div class="featured-image">
+        <span class="badge">Featured</span>
+      </div>
+      <div class="featured-content">
+        <div class="meta">AI Front Desk</div>
+        <h2><a href="blog-article.html">The Best AI Front Desk for Med Spas in 2026</a></h2>
+        <p class="excerpt">Over 50% of med spa calls go unanswered. Lift My Spa's 24/7 AI Front Desk answers every call, books appointments, and follows up in English and Spanish. Here is why it is the best choice for med spas in 2026.</p>
+        <div>
+          <a href="blog-article.html" class="btn btn-primary">Read the Article</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARTICLE GRID ============ -->
+<section class="articles-section">
+  <div class="container">
+    <h2>Latest Articles</h2>
+    <div class="articles-grid">
+
+      <article class="article-card">
+        <div class="article-card-image">
+          <img src="https://images.unsplash.com/photo-1706403222567-06fe8d8dc93e?w=900&q=80&auto=format&fit=crop" alt="Aerial view of Phoenix">
+        </div>
+        <div class="article-card-body">
+          <span class="article-card-tag">City</span>
+          <h3><a href="blog-article.html">Best AI Front Desk for Phoenix Med Spas</a></h3>
+          <p class="excerpt">Maricopa search demand is up 173% YoY. Here is the AI front desk built to convert that boom.</p>
+          <div class="meta">Phoenix, AZ</div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-card-image">
+          <img src="https://images.unsplash.com/photo-1558731991-cb3430a08bb7?w=900&q=80&auto=format&fit=crop" alt="Person on the phone">
+        </div>
+        <div class="article-card-body">
+          <span class="article-card-tag">Pain-Point</span>
+          <h3><a href="#">The $200K Leak: Why Med Spas Lose This Much From Missed Calls</a></h3>
+          <p class="excerpt">Med spas can lose up to $200K per year from missed calls. Here is the math and the fix.</p>
+          <div class="meta">Industry Research</div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-card-image">
+          <img src="https://images.unsplash.com/photo-1571041804726-53e8bf082096?w=900&q=80&auto=format&fit=crop" alt="Miami Beach">
+        </div>
+        <div class="article-card-body">
+          <span class="article-card-tag">City</span>
+          <h3><a href="#">Best Marketing Platform for Miami Med Spas</a></h3>
+          <p class="excerpt">Miami-Dade demand is up 41% YoY. The bilingual AI front desk built for Florida med spas.</p>
+          <div class="meta">Miami, FL</div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-card-image">
+          <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=900&q=80&auto=format&fit=crop" alt="Facial cream application">
+        </div>
+        <div class="article-card-body">
+          <span class="article-card-tag">Service Marketing</span>
+          <h3><a href="#">How to Market Botox at Your Med Spa</a></h3>
+          <p class="excerpt">Stop wasting ad spend. Convert Botox leads into booked, repeat clients.</p>
+          <div class="meta">Service Marketing</div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-card-image">
+          <img src="https://images.unsplash.com/photo-1665231795856-769fb08a90bc?w=900&q=80&auto=format&fit=crop" alt="Modern consultation room">
+        </div>
+        <div class="article-card-body">
+          <span class="article-card-tag">Compliance</span>
+          <h3><a href="#">Texas Med Spa Marketing Compliance: TDLR + TMB Rules</a></h3>
+          <p class="excerpt">Avoid violations with a plain-English guide to TDLR, Texas Medical Board, and FTC rules.</p>
+          <div class="meta">Compliance · Texas</div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-card-image">
+          <img src="https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?w=900&q=80&auto=format&fit=crop" alt="Marketing dashboard data">
+        </div>
+        <div class="article-card-body">
+          <span class="article-card-tag">Comparison</span>
+          <h3><a href="#">Lift My Spa vs Boulevard for Med Spas</a></h3>
+          <p class="excerpt">Why Lift My Spa beats Boulevard for med spas: built-in AI front desk, pre-built workflows, HIPAA-aware.</p>
+          <div class="meta">Comparison</div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="pagination">
+      <span class="current">1</span>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">…</a>
+      <a href="#">17</a>
+      <a href="#">Next →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA STRIP ============ -->
+<section class="cta-strip">
+  <div class="container-narrow">
+    <h2>Med spa marketing insights you can actually use.</h2>
+    <p>Want a personal walkthrough of how Lift My Spa would work for your clinic? Book a free 30-minute consultation. No pressure.</p>
+    <a href="https://liftmyspa.com/demo-call-page" class="btn btn-light" style="font-size:1rem; padding:16px 32px;">Schedule Free Consultation</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER (clones liftmyspa.com) ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a href="https://liftmyspa.com" class="footer-logo">
+        <img src="logo-white.webp" alt="Lift My Spa">
+      </a>
+      <nav class="footer-nav">
+        <a href="https://liftmyspa.com/terms-conditions" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
+        <a href="https://liftmyspa.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">Liftmyspa.com © Copyright. All rights Reserved.</p>
+      <p class="footer-disclaimer">All Lift My Spa services are non-clinical and are designed to support marketing and communication for licensed medical spas. We do not provide medical advice, diagnosis, or treatment. Client results may vary. Referral programs, offers, and testimonial use must comply with applicable federal (including HIPAA and FTC) and state regulations (TX, FL, AZ, OK). Review automation, lead generation, and performance metrics are based on reported data and not guaranteed. All tools are designed to follow HIPAA privacy standards and advertising guidelines set by ad platforms and state medical boards. Contact us for compliance details.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
