@@ -3,6 +3,14 @@
 Thumbs.db
 *.swp
 
+# Wrangler cache
+.wrangler/
+node_modules/
+
+# Source assets (copied into design/)
+Logo*.png
+heart.png
+
 # Python
 __pycache__/
 *.pyc
